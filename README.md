@@ -471,3 +471,150 @@ int main() {
 void Hello(){
     printf("Hello \n");
 }
+
+
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+void Hello();
+void Goodbye();
+void ind_french();
+void table(int a);
+int areaofsquare(int a);
+int areaofrectangle (int a, int b);
+float areaofcircle (int a);
+int sumofnumbers(int a);
+int factorial(int a);
+void printfibonacci(int length);
+void printfibonacci1(int length);
+
+int main() {
+    
+    // Hello();
+    // Goodbye();
+    
+    // ind_frenchi();
+
+    // int b;
+    // printf("Enter the no. you want he table of : ");
+    // scanf("%d",&b);
+    // table(b);
+ 
+    // int input;
+    // printf("What factorial do you want ?\n");
+    // scanf("%d",&input);
+    // int output = factorial(input);
+    // printf("factorial =  %d \n",output);
+
+    int input;
+    printf("How many digits of Fibonacci series do you want to print : ");
+    scanf("%d",&input);
+    printfibonacci(input);
+    
+
+
+
+    return 0;
+}
+
+void Hello(){
+    printf("Hello \n");
+}
+
+void Goodbye(){
+    printf("Good Bye \n");
+}
+
+void ind_french(){
+    int input;
+    printf("If you are Indian press 1 \nIf you are French press 2 \n");
+    scanf("%d",&input);
+    if(input==1){
+        printf("Hello \n");
+    }
+    else if(input==2){
+        printf("Bonjour \n");
+    }
+    else {
+        printf("Invalid input!! \n");
+    }
+    
+}
+
+void table(int a){
+    for(int i=1;i<=10;i++){
+        printf("%d X %d = %d \n",a,i,a*i);
+    }
+}
+
+int areaofsquare(int a){
+    return a*a;
+}
+
+int areaofrectangle(int a,int b){
+    return a*b;
+}
+
+float areaofcirlce(int a){
+    return 22*a*a/7;
+}
+
+int sumofnumbers(int a){
+    if(a==1){
+        return 1;
+    }
+    int summ1 = sumofnumbers(a-1);
+    int sum = a+ summ1;
+    return sum;
+}
+
+int factorial(int a){
+    if (a==1)
+    {
+        return 1;
+    }
+    int factorm1=factorial(a-1);
+    int factor = factorm1 * a;
+    return factor;
+}
+
+void printfibonacci(int length){
+int a=0,b=1;
+printf("%d \n",a);
+if (length==0){
+    return;
+}
+printf("%d \n",b);
+if (length==1){
+    return;
+}
+for (int i=0;i < length-1;i++)
+{
+    int c=a+b;
+    printf("%d \n",c);
+    a=b;
+    b=c;
+}
+}
+
+void printfibonacci1(int length){
+int f0,f1;
+if (length==0){
+    printf("%d \n",a);
+    return;
+}
+if (length==1){
+    printf("%d \n",b);
+    return;
+}
+for (int i=0;i < length-1;i++)
+{
+    int c=a+b;
+    printf("%d \n",c);
+    a=b;
+    b=c;
+}
+}
